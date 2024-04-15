@@ -1,0 +1,28 @@
+{
+  "namespace": "avro",
+  "type": "record",
+  "name": "book-event",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "string"
+    },
+    {
+      "name": "timestamp",
+      "type": "long"
+    },
+    {
+      "name": "book_id",
+      "type": "string"
+    },
+    {
+      "name": "return_date",
+      "type": "long"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "symbols": ["BOOKED", "RETURNED"]
+    }
+  ]
+}
