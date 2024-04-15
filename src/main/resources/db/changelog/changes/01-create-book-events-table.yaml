@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-analytics-table
+      author: ivan-diatliuk
+      changes:
+        - createTable:
+            tableName: analytics_data
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: book_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: timestamp
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: return_date
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
